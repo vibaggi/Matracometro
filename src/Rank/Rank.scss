@@ -1,0 +1,21 @@
+table{
+    width: 100%;;
+    background-color: #282c34;
+    color: white;
+    border-radius: 2px;
+    margin: 10px 0;
+    tr{
+        height: 24px;
+        line-height: 24px;
+    }
+}
+
+
+
+.icon-column{
+    display: flex;
+    img{
+        height: 22px;
+        margin-left: auto;
+    }
+}
