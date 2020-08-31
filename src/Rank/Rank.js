@@ -7,11 +7,12 @@ import bronzeMedal from './icons/bronze-medal.svg'
 const rank = (props) =>{
     return(
         <table>
-            <tr>
+            <tr className="head-container">
                 <th></th>
                 <th>Posição</th>
                 <th>Nome</th>
                 <th>Mensagens</th>
+                <th>Palavras</th>
             </tr>
                 {props.lista.map((user, index)=>{
                     return(
@@ -24,6 +25,7 @@ const rank = (props) =>{
                             <td>{index+1}</td>
                             <td>{user.nome}</td>
                             <td>{user.totalMensagens}</td>
+                            <td>{user.totalPalavras}</td>
                         </tr>
                     )
                 })}
