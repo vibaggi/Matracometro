@@ -49,8 +49,8 @@ class Analyzer extends Component {
                     if(separacao.length == 1){
                         continue; // Nesse caso é algum aviso do sistema!
                     }
-                    usuarioAtual = separacao[0]
-                    texto = separacao[1]
+                    usuarioAtual = separacao.slice(0)[0]
+                    texto = separacao.join("")
                 }
                 
                 // if(usuarioAtual == '') console.log(texto);
@@ -99,7 +99,8 @@ class Analyzer extends Component {
         return(
             <div>
                 <FileUploaderButton labelText="Incluir Arquivo" onChange={this.processar}/>
-                <Rank lista={this.state.usuarios}/>
+                {this.state.usuarios.length > 0 ? <Rank lista={this.state.usuarios}/> : <div> Insira seu documento.txt acima! </div>}
+                
             </div>
         )
     }
