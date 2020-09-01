@@ -15,8 +15,8 @@ class Navbar extends Component {
                     Matracometro
                 </HeaderName>
                 <HeaderNavigation aria-label="IBM [Platform]">
-                    <HeaderMenuItem href="#"> Medir </HeaderMenuItem>
-                    <HeaderMenuItem href="#">Sobre</HeaderMenuItem>
+                    <HeaderMenuItem href="/"> Medir </HeaderMenuItem>
+                    <HeaderMenuItem href="/about">Sobre</HeaderMenuItem>
                 </HeaderNavigation>
             </Header>
         )
