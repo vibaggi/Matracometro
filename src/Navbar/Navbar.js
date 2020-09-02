@@ -16,7 +16,7 @@ class Navbar extends Component {
                 </HeaderName>
                 <HeaderNavigation aria-label="IBM [Platform]">
                     <HeaderMenuItem href="/"> Medir </HeaderMenuItem>
-                    <HeaderMenuItem href="/about">Sobre</HeaderMenuItem>
+                    {/* <HeaderMenuItem href="/about">Sobre</HeaderMenuItem> */}
                 </HeaderNavigation>
             </Header>
         )

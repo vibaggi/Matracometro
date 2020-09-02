@@ -27,6 +27,7 @@ function App() {
             </Switch>
         </Router>
       </Content>
+      <About />
     </div>
   );
 }

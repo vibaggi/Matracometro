@@ -5,6 +5,7 @@ import Rank from '../Rank/Rank'
 import ImgExportarConv from './../assets/exportar-conversa.png'
 import ImgSemDocs from './../assets/sem-documentos.png'
 import './Analyzer.scss'
+import About from "../About/About";
 
 
 class Analyzer extends Component {
@@ -134,50 +135,53 @@ class Analyzer extends Component {
 
     render() {
         return (
-            <div>
+            <div class="analyzer-container">
                 {
-                this.state.dataChart.length == 0 ?
-                <div class="bx--grid">
-                    <div class="bx--row">
-                        <div className="bx--col-lg-16">
-                            <h1 className="landing-page__heading"> Instruções </h1>
+                    this.state.dataChart.length == 0 ?
+                        <div class="bx--grid">
+                            <div class="bx--row">
+                                <div className="bx--col-lg-16">
+                                    <h1 className="landing-page__heading"> Instruções </h1>
+                                </div>
+                            </div>
+                            <div class="bx--row">
+                                <div class="bx--col-lg-2 bx--col-md-2 bx--col-sm-1 img">
+                                    <img src={ImgExportarConv} />
+                                </div>
+                                <div class="bx--col-lg-14 bx--col-md-6 bx--col-sm-3 text">
+                                    Usando o Whatsapp pelo celular, entre em um grupo,
+                                    vá em opções de uma conversa e procure por 'Exportar Conversa'.
                         </div>
-                    </div>
-                    <div class="bx--row">
-                        <div class="bx--col-lg-2 bx--col-md-2 bx--col-sm-1 img">
-                            <img src={ImgExportarConv}/>
+                            </div>
+                            <div class="bx--row">
+                                <div class="bx--col-lg-2 bx--col-md-2 bx--col-sm-1 ">
+                                    <img src={ImgSemDocs} />
+                                </div>
+                                <div class="bx--col-lg-14 bx--col-md-6 bx--col-sm-3 text">
+                                    Baixe o arquivo sem midia inclusa. Será gerado um arquivo.txt.
+                                    Faça download no seu celular, ou envie para seu computador.
                         </div>
-                        <div class="bx--col-lg-14 bx--col-md-6 bx--col-sm-3 text">
-                            Usando o Whatsapp pelo celular, entre em um grupo,
-                            vá em opções de uma conversa e procure por 'Exportar Conversa'. 
+                            </div>
+                            <div class="bx--row">
+                                <div class="bx--col">
+                                    Agora no botão abaixo, inclua o arquivo e aguarde. Em instantes sua conversa será analisada!
                         </div>
-                    </div>
-                    <div class="bx--row">
-                        <div class="bx--col-lg-2 bx--col-md-2 bx--col-sm-1 ">
-                            <img src={ImgSemDocs}/>
+                            </div>
+                            <div class="bx--row">
+
+                            </div>
                         </div>
-                        <div class="bx--col-lg-14 bx--col-md-6 bx--col-sm-3 text">
-                            Baixe o arquivo sem midia inclusa. Será gerado um arquivo.txt.
-                            Faça download no seu celular, ou envie para seu computador.
-                        </div>
-                    </div>
-                    <div class="bx--row">
-                        <div class="bx--col">
-                            Agora no botão abaixo, inclua o arquivo e aguarde. Em instantes sua conversa será analisada!
-                        </div>
-                    </div>
-                    <div class="bx--row">
-                        
-                    </div>
-                </div>
-                : ''
+                        : ''
                 }
 
                 <FileUploaderButton labelText="Incluir Arquivo" onChange={this.processar} />
-                {this.state.usuarios.length > 0 ? <Rank lista={this.state.usuarios} /> : '' }
+                {this.state.usuarios.length > 0 ? <Rank lista={this.state.usuarios} /> : ''}
 
-                {this.state.dataChart.length > 0 ?  <LineChart data={this.state.dataChart} options={this.optionsChart}> </LineChart> : '' }
+                {this.state.dataChart.length > 0 ? <LineChart data={this.state.dataChart} options={this.optionsChart}> </LineChart> : ''}
+
             </div>
+
+
         )
     }
 
